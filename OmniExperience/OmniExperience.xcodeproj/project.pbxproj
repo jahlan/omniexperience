@@ -14,6 +14,9 @@
 		7688D04A24B293D200C7E731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7688D04924B293D200C7E731 /* Assets.xcassets */; };
 		7688D04D24B293D200C7E731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7688D04B24B293D200C7E731 /* LaunchScreen.storyboard */; };
 		7688D05824B293D300C7E731 /* OmniExperienceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688D05724B293D300C7E731 /* OmniExperienceTests.swift */; };
+		7688D06424B2994B00C7E731 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688D06324B2994B00C7E731 /* Post.swift */; };
+		7688D06724B2A0C000C7E731 /* NetworkUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688D06624B2A0C000C7E731 /* NetworkUtilities.swift */; };
+		7688D06A24B2A13C00C7E731 /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688D06924B2A13C00C7E731 /* ServiceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		7688D05324B293D300C7E731 /* OmniExperienceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmniExperienceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7688D05724B293D300C7E731 /* OmniExperienceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmniExperienceTests.swift; sourceTree = "<group>"; };
 		7688D05924B293D300C7E731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7688D06324B2994B00C7E731 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		7688D06624B2A0C000C7E731 /* NetworkUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtilities.swift; sourceTree = "<group>"; };
+		7688D06924B2A13C00C7E731 /* ServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,8 @@
 		7688D03F24B293CF00C7E731 /* OmniExperience */ = {
 			isa = PBXGroup;
 			children = (
+				7688D06524B2A0B600C7E731 /* Utilities */,
+				7688D06224B2982E00C7E731 /* Model */,
 				7688D04024B293CF00C7E731 /* AppDelegate.swift */,
 				7688D04224B293CF00C7E731 /* SceneDelegate.swift */,
 				7688D04424B293CF00C7E731 /* ViewController.swift */,
@@ -97,6 +105,31 @@
 				7688D05924B293D300C7E731 /* Info.plist */,
 			);
 			path = OmniExperienceTests;
+			sourceTree = "<group>";
+		};
+		7688D06224B2982E00C7E731 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7688D06824B2A10D00C7E731 /* Service */,
+				7688D06324B2994B00C7E731 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7688D06524B2A0B600C7E731 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7688D06624B2A0C000C7E731 /* NetworkUtilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7688D06824B2A10D00C7E731 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7688D06924B2A13C00C7E731 /* ServiceController.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +235,10 @@
 			files = (
 				7688D04524B293CF00C7E731 /* ViewController.swift in Sources */,
 				7688D04124B293CF00C7E731 /* AppDelegate.swift in Sources */,
+				7688D06724B2A0C000C7E731 /* NetworkUtilities.swift in Sources */,
+				7688D06A24B2A13C00C7E731 /* ServiceController.swift in Sources */,
 				7688D04324B293CF00C7E731 /* SceneDelegate.swift in Sources */,
+				7688D06424B2994B00C7E731 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

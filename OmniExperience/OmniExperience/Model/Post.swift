@@ -12,12 +12,12 @@ class Post {
     var id : String
     var title : String
     var author : String
-    var date : String
+    var date : Int
     var thumbnail : String?
     var numberOfComments : Int
     var unreadStatus : Bool
     
-    init(_ id: String, title: String, author: String, date: String, thumbnail: String?, numberOfComments: Int, unreadStatus: Bool){
+    init(_ id: String, title: String, author: String, date: Int, thumbnail: String?, numberOfComments: Int, unreadStatus: Bool){
         self.id = id
         self.title = title
         self.author = author
