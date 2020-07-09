@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7688D04124B293CF00C7E731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688D04024B293CF00C7E731 /* AppDelegate.swift */; };
 		7688D04324B293CF00C7E731 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688D04224B293CF00C7E731 /* SceneDelegate.swift */; };
-		7688D04524B293CF00C7E731 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688D04424B293CF00C7E731 /* ViewController.swift */; };
 		7688D04824B293CF00C7E731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7688D04624B293CF00C7E731 /* Main.storyboard */; };
 		7688D04A24B293D200C7E731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7688D04924B293D200C7E731 /* Assets.xcassets */; };
 		7688D04D24B293D200C7E731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7688D04B24B293D200C7E731 /* LaunchScreen.storyboard */; };
@@ -17,6 +16,8 @@
 		7688D06424B2994B00C7E731 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688D06324B2994B00C7E731 /* Post.swift */; };
 		7688D06724B2A0C000C7E731 /* NetworkUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688D06624B2A0C000C7E731 /* NetworkUtilities.swift */; };
 		7688D06A24B2A13C00C7E731 /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688D06924B2A13C00C7E731 /* ServiceController.swift */; };
+		7688D06D24B3603A00C7E731 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688D06C24B3603A00C7E731 /* HomeViewController.swift */; };
+		769D2EF424B7737F0061DA64 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769D2EF324B7737F0061DA64 /* ExtensionUIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +34,6 @@
 		7688D03D24B293CF00C7E731 /* OmniExperience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmniExperience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7688D04024B293CF00C7E731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7688D04224B293CF00C7E731 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7688D04424B293CF00C7E731 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7688D04724B293CF00C7E731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7688D04924B293D200C7E731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7688D04C24B293D200C7E731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +44,8 @@
 		7688D06324B2994B00C7E731 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		7688D06624B2A0C000C7E731 /* NetworkUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtilities.swift; sourceTree = "<group>"; };
 		7688D06924B2A13C00C7E731 /* ServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceController.swift; sourceTree = "<group>"; };
+		7688D06C24B3603A00C7E731 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		769D2EF324B7737F0061DA64 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,11 +87,11 @@
 		7688D03F24B293CF00C7E731 /* OmniExperience */ = {
 			isa = PBXGroup;
 			children = (
+				7688D06B24B3601D00C7E731 /* View */,
 				7688D06524B2A0B600C7E731 /* Utilities */,
 				7688D06224B2982E00C7E731 /* Model */,
 				7688D04024B293CF00C7E731 /* AppDelegate.swift */,
 				7688D04224B293CF00C7E731 /* SceneDelegate.swift */,
-				7688D04424B293CF00C7E731 /* ViewController.swift */,
 				7688D04624B293CF00C7E731 /* Main.storyboard */,
 				7688D04924B293D200C7E731 /* Assets.xcassets */,
 				7688D04B24B293D200C7E731 /* LaunchScreen.storyboard */,
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				7688D06624B2A0C000C7E731 /* NetworkUtilities.swift */,
+				769D2EF324B7737F0061DA64 /* ExtensionUIColor.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -130,6 +133,14 @@
 				7688D06924B2A13C00C7E731 /* ServiceController.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		7688D06B24B3601D00C7E731 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7688D06C24B3603A00C7E731 /* HomeViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,12 +244,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7688D04524B293CF00C7E731 /* ViewController.swift in Sources */,
 				7688D04124B293CF00C7E731 /* AppDelegate.swift in Sources */,
 				7688D06724B2A0C000C7E731 /* NetworkUtilities.swift in Sources */,
 				7688D06A24B2A13C00C7E731 /* ServiceController.swift in Sources */,
 				7688D04324B293CF00C7E731 /* SceneDelegate.swift in Sources */,
 				7688D06424B2994B00C7E731 /* Post.swift in Sources */,
+				769D2EF424B7737F0061DA64 /* ExtensionUIColor.swift in Sources */,
+				7688D06D24B3603A00C7E731 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +413,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BRASZMCSQ6;
 				INFOPLIST_FILE = OmniExperience/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,6 +432,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BRASZMCSQ6;
 				INFOPLIST_FILE = OmniExperience/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
