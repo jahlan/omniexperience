@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.registerCells()
         self.configureViews()
         self.loadData()
     }
@@ -25,7 +26,7 @@ class HomeViewController: UIViewController {
         self.postsTableView.reloadData()
         
         //Fetch posts
-        ServiceController.shared.getRedditPosts(path: "/all/top.json", limit: 10, after: nil, completion: { [weak self] result in
+        ServiceController.shared.getRedditPosts(path: Constants.postsUrlPath, limit: 10, after: nil, completion: { [weak self] result in
             switch result{
                 case .failure(let error) :
                     DispatchQueue.main.async {
@@ -42,10 +43,15 @@ class HomeViewController: UIViewController {
         })
     }
     
+    func registerCells(){
+        self.postsTableView.register(PostCell.self, forCellReuseIdentifier: CellReuseIndentifiers.postCell)
+    }
+    
     func configureViews(){
         //Header
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.title = "Reddit"
+        self.navigationController?.navigationBar.backgroundColor = UIColor.white
+        self.navigationItem.title = Constants.homeScreenTitle
         
         //Table
         self.view.addSubview(self.postsTableView)
@@ -57,6 +63,8 @@ class HomeViewController: UIViewController {
         
         self.postsTableView.delegate = self
         self.postsTableView.dataSource = self
+        self.postsTableView.backgroundColor = Constants.colorLightGray
+        self.postsTableView.separatorStyle = .none
         
         //Pull to refresh
         self.pullToRefresh.addTarget(self, action: #selector(self.loadData), for: .valueChanged)
@@ -66,14 +74,19 @@ class HomeViewController: UIViewController {
 
 }
 
+//Table view functions
 extension HomeViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.reditPosts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = self.reditPosts[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellReuseIndentifiers.postCell, for: indexPath) as! PostCell
+        
+        cell.prepareCell(withPost: self.reditPosts[indexPath.row])
+        
+        tableView.estimatedRowHeight = 60
+        
         return cell
     }
 }

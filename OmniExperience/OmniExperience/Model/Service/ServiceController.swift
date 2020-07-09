@@ -65,7 +65,7 @@ class ServiceController{
                                     
                                     //Append posts
                                     if let id = childrenData["id"] as? String,
-                                       let author = childrenData["author_fullname"] as? String,
+                                       let author = childrenData["author"] as? String,
                                        let title = childrenData["title"] as? String,
                                        let date = childrenData["created"] as? Int,
                                        let comments = childrenData["num_comments"] as? Int,
